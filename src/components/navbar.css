@@ -1,0 +1,123 @@
+/* Base styles for navbar */
+.inapp-navbar {
+  background: none;
+  background-color: none;
+  position: fixed;
+  bottom: 0; /* Position at the bottom */
+  /* height: 100%; */
+  width: 5%;
+  padding-left: 3rem;
+  padding-right: 2rem;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+/* Hide navigation items initially */
+.inapp-navbar .nav-item {
+  display: none;
+  background: none;
+}
+
+/* Styles for open navbar */
+.inapp-navbar.open {
+  /* position: fixed; */
+  /* transition: bottom 1s ease-in-out; */
+  background: none;
+  width: 100%;
+  height: 100%;
+  /* height: calc(100vh - 80px); */
+  background-image: radial-gradient(ellipse at 50%, #f03838 15%, transparent);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover and active states */
+}
+
+/* Style open navbar items to display on top */
+
+.inapp-navbar.open .nav-item {
+  display: flex;
+  background: none;
+  /* margin-top: 3rem; */
+  width: 100%;
+  background: none;
+  justify-content: center;
+}
+
+/* Styles for fab button */
+.fab {
+  position: absolute;
+  bottom: 15px; /* Position at bottom with some margin */
+  background-color: #cacaca;
+  border: none;
+  border-radius: 85%;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  z-index: 10000;
+}
+
+/* Styles for open fab button */
+.fab.open {
+  transform: rotate(90deg);
+  background-color: none;
+  background: none;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+/* Image styles */
+img {
+  height: 35px;
+  width: auto;
+}
+
+/* Nav icon styles */
+.nav-icon {
+  height: 45px;
+}
+
+/* Navigation item styles */
+.nav-item {
+  text-align: center;
+  flex: 1;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+/* Mobile navbar links (if needed) */
+.mobile-navbar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Adjust nav item styles for horizontal display (optional) */
+.nav-item {
+  padding: 15px;
+  /* Remove text-align: left;  if you want items centered horizontally */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust workout icon height (optional) */
+.workout-icon {
+  height: 75px;
+}
+
+.logo {
+  text-align: center;
+}

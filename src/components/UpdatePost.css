@@ -1,0 +1,17 @@
+.close-btn {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.exercise-form {
+  margin-top: 20px;
+}

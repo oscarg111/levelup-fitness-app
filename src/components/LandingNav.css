@@ -1,0 +1,154 @@
+* {
+  font-family: "Press Start 2P", system-ui;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  background-color: #fff; /* Adjust background color as needed */
+  transition: all 0.3s ease-in-out;
+  /* padding: 0.3rem 5rem 4rem 0.3rem; */
+
+  height: auto;
+  flex-direction: row; /* Ensure items are in a single row */
+  z-index: 10000;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center; /* Aligns the logo and text vertically */
+}
+
+.logo-image {
+  width: 10vh;
+  height: 10vh;
+  margin-right: 1rem; /* Adds spacing between the image and the text */
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-links {
+  /* display: flex; */
+  list-style: none; /* Removes bullets from the list */
+  text-align: center;
+}
+
+.navbar-links li {
+  display: inline-block;
+  margin: 0 1rem; /* Adds spacing between links */
+  align-items: center;
+}
+
+.navbar-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Add padding for the pill shape */
+  border-radius: 50px; /* Makes the links pill-shaped */
+  background-color: #f0f0f0; /* Default background color */
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+}
+
+.navbar-links.scrolled a {
+  display: inline-block;
+  padding: 0.5rem 1rem; /* Add padding for the pill shape */
+  border-radius: 50px; /* Makes the links pill-shaped */
+  background-color: #efca9d; /* Default background color */
+  color: black; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth transition for hover and active states */
+}
+
+.navbar-links a:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  background-color: #eaeaea; /* Slightly change background color on hover */
+}
+
+a:hover {
+  color: #ff8132;
+}
+
+.navbar-links a.active {
+  background-color: #ff8132; /* Highlight active link */
+  color: white; /* White text for better contrast */
+  font-weight: bold; /* Emphasize active link */
+}
+
+.web-navbar.scrolled {
+  box-shadow: 0 5px 10px rgba(1, 0, 0, 0.2);
+  background-color: #f0f0f0; /* Adjust background color for scrolled state */
+}
+
+.web-navbar {
+  justify-content: center;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  height: 1px;
+  width: auto;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  /* border: 1px solid #ccc; */
+  padding: 0; /* Initial padding set to 0 */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0; /* Starts at 0 height */
+  /* width: 100%; */
+  align-items: start;
+  transition: max-height 0.3s ease-in-out; /* Adjust timing */
+  /* opacity: 0; */
+}
+
+.dropdown-menu.show {
+  max-height: 500px; /* Large enough value to accommodate dropdown content */
+  opacity: 1; /* Make it visible */
+}
+
+.dropdown-menu li {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: black;
+}
+/* 
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+} */
+
+@media (max-width: 950px) {
+  .navbar {
+    display: flex;
+    /* background-color: black; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

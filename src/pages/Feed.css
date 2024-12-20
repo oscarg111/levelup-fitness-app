@@ -1,0 +1,108 @@
+.feed-pg {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+.feed-container {
+  /* transform: translateX(150px); */
+
+  width: 80vw;
+  margin: 15vh 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-title {
+  align-items: left;
+  width: 100%;
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+  .feed-pg {
+    flex-direction: column;
+    height: auto; /* Allow dynamic height */
+  }
+
+  .feed-container {
+    transform: none; /* Remove offset */
+    width: 90%; /* Fit within viewport */
+    margin: 1rem auto;
+  }
+
+  .feed-card {
+    width: 90%; /* Fit within mobile viewport */
+    height: auto; /* Allow height to adjust dynamically */
+    margin-bottom: 2rem;
+  }
+
+  .upload-info {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+  }
+
+  .workout-column {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Allow height to adjust */
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .character-column {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Allow height to adjust */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    height: 150px; /* Smaller hero image for mobile */
+    width: 150px;
+  }
+
+  .card-top {
+    flex-direction: column; /* Stack top content vertically */
+    align-items: center;
+  }
+
+  .comment-section {
+    padding: 1rem; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .feed-container {
+    width: 100%; /* Use full viewport width */
+    margin: 0.5rem;
+  }
+
+  .feed-card {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .workout-column {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  .hero-image {
+    height: 100px; /* Further reduce hero image size */
+    width: 100px;
+  }
+
+  .card-top {
+    font-size: 12px; /* Smaller text for card top */
+    padding: 0.5rem;
+  }
+
+  .comment-section {
+    padding: 0.5rem; /* Less padding for smaller screens */
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 12px; /* Smaller font sizes for inputs */
+  }
+}

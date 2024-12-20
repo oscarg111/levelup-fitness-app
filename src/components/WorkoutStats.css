@@ -1,0 +1,12 @@
+.workout-stats-page {
+  background-color: #8baad1;
+  border-radius: 10px;
+  padding: 10px;
+}
+.lifetime-prs {
+  background-color: #788eaa;
+  max-height: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto;
+}

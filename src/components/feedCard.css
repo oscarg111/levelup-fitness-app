@@ -1,0 +1,178 @@
+.feed-card {
+  border: solid;
+  padding: 0px 10px 0px 10px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 30rem;
+}
+.upload-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.character-column,
+.workout-column {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.workout-column {
+  background-color: white;
+  border: solid black;
+  border-radius: 15px;
+  margin-right: 1rem;
+  width: 70%;
+  height: 60%;
+  text-align: left;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+.workout-column p {
+  padding-bottom: 15px;
+}
+.character-column {
+  width: 50%;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image {
+  height: 300px;
+  width: auto;
+  image-rendering: pixelated;
+}
+.card-top {
+  padding: 0.5rem 1rem 0rem 1rem;
+  width: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+.comment-section {
+  display: flex;
+  margin-top: auto;
+  padding: 0 1rem 6rem 0.5rem;
+  justify-content: right;
+}
+.comment-section img {
+  bottom: 0;
+  position: relative;
+}
+
+.workout-info {
+  max-height: 305px; /* Limit the height of the div */
+  overflow-y: auto; /* Add vertical scrolling */
+  /* border: 1px solid #ccc;  */
+  /* padding: 10px; */
+}
+
+/* Customize the scrollbar */
+.workout-info::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+.workout-info::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Optional: rounded track corners */
+}
+
+.workout-info::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Optional: rounded handle corners */
+}
+
+.workout-info::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+  .feed-pg {
+    flex-direction: column;
+    height: auto; /* Allow dynamic height */
+  }
+
+  .feed-container {
+    transform: none; /* Remove offset */
+    width: 90%; /* Fit within viewport */
+    margin: 1rem auto;
+  }
+
+  .feed-card {
+    width: 90%; /* Fit within mobile viewport */
+    height: auto; /* Allow height to adjust dynamically */
+    margin-bottom: 2rem;
+  }
+
+  .upload-info {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center;
+  }
+
+  .workout-column {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Allow height to adjust */
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .character-column {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Allow height to adjust */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-image {
+    height: 150px; /* Smaller hero image for mobile */
+    width: auto;
+  }
+
+  .card-top {
+    flex-direction: column; /* Stack top content vertically */
+    align-items: center;
+  }
+
+  .comment-section {
+    padding: 1rem; /* Reduce padding */
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feed-container {
+    width: 100%; /* Use full viewport width */
+    margin: 0.5rem;
+  }
+
+  .feed-card {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .workout-column {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+
+  .hero-image {
+    height: 100px; /* Further reduce hero image size */
+    width: 100px;
+  }
+
+  .card-top {
+    font-size: 12px; /* Smaller text for card top */
+    padding: 0.5rem;
+  }
+
+  .comment-section {
+    padding: 0.5rem; /* Less padding for smaller screens */
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 12px; /* Smaller font sizes for inputs */
+  }
+}

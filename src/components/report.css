@@ -1,0 +1,34 @@
+.popup-overlay.open {
+    position:fixed;
+    display: flex;
+    transition: left 1s ease-in-out;
+    width: 100vw;
+    height:100vh;
+    background-color: rgba( 0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+.popup-overlay.open .report-btn {
+    display: none;
+}
+.popup-container{
+    background-color: var(--blue);
+    border-radius: 20px;
+    width: 900px;
+    height: 300px;
+    text-align: center;
+}
+ .report-btn {
+    background: none;
+    box-shadow: none;
+    background-color: none;
+    margin: 0;
+    padding: 0;
+}
+.close-btn {
+    background: none;
+    box-shadow: none;
+    background-color: none;
+    margin: 0;
+    padding: 0;
+}

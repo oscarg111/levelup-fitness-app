@@ -1,0 +1,75 @@
+/* Base container styles */
+.hero-container {
+  display: flex;
+  flex-direction: row; /* Default horizontal layout */
+  border: solid;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  margin: 2rem;
+  /* height: 25rem; */
+  width: 90%;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items in the container */
+  align-items: center; /* Align items vertically */
+  gap: 1rem; /* Space between items */
+}
+
+/* Hero Stats Card */
+.hero-stats-card {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(245, 245, 245, 0.5); /* Transparent light gray */
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  flex: 1 2 300px; /* Grow and shrink, with a base size of 300px */
+  max-width: 900px; /* Prevent it from getting too wide */
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1 1 300px; /* Similar behavior to hero-stats-card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+
+.hero-image img {
+  width: auto; /* Make image responsive */
+  height: 100%;
+  border-radius: 10px; /* Rounded edges for the image */
+}
+
+/* Stat bar */
+.stat-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Health bar fill */
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .hero-image,
+  .hero-stats-card {
+    max-width: 100%; /* Take full width */
+  }
+}

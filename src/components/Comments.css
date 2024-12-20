@@ -1,0 +1,15 @@
+.add-comment {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Box-shadow effect on hover */
+  border-radius: 10px;
+  border-style: solid;
+  padding: 10px;
+  margin: 0px 10px 5px 0px;
+}
+
+.comment-card {
+  border-style: solid;
+  padding: 0px 10px 3px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Box-shadow effect on hover */
+}

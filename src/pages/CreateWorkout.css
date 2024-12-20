@@ -1,0 +1,222 @@
+.create-workout-card {
+  border: solid;
+  /* padding: 0px 10px 0px 10px; */
+  border-radius: 10px;
+  background-color: var(--blue);
+  width: 100%;
+  height: 100rem;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  /* justify-content: center; */
+  /* margin-top: 15vh; */
+}
+.workout-form-container {
+  border: solid;
+  padding: 0px 10px 0px 10px;
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2rem;
+}
+.create-workout-container {
+  /* transform: translateX(150px); */
+  width: 80vw;
+  margin: 1.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh;
+}
+.create-workout-form {
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+.create-workout-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+input {
+  background-color: var(--grey);
+}
+
+.exercise-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 100;
+  position: absolute;
+  margin-top: -4rem;
+  border: solid;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+/* Customize the scrollbar */
+.exercise-list::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+.exercise-list::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Optional: rounded track corners */
+}
+
+.exercise-list::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Optional: rounded handle corners */
+}
+
+.exercise-list::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+
+.weight-input {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.weightform-input {
+  width: 50%;
+  margin-right: 1rem;
+}
+.add-exercise-button {
+  margin: 0;
+  margin-left: 1rem;
+}
+.unit-select {
+  width: 70px;
+  height: 25px;
+}
+.workout-description-input {
+  width: 70%;
+}
+.exercise-search-input {
+  width: 70%;
+}
+.create-workout-form input {
+  margin-bottom: 2rem;
+}
+.sets-input {
+  width: 40%;
+  display: inline-block;
+}
+.rep-input {
+  width: 40%;
+}
+.sets-rep-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  /* margin-right: 1rem; */
+  /* width: 25px;
+  height: 30px; */
+}
+.remove-exercise-button {
+  background: none;
+  box-shadow: none;
+  background-color: none;
+}
+.trash-icon {
+  height: 25px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .create-workout-card {
+    width: 90vw; /* Adjust width to fit smaller screens */
+    height: auto; /* Allow height to adjust dynamically */
+    padding: 1rem;
+    margin-bottom: 15vh;
+  }
+
+  .workout-form-container {
+    width: 90%; /* Fit within viewport width */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .create-workout-container {
+    transform: none; /* Remove offset for mobile */
+    width: 100%; /* Use full width */
+    margin: 1rem 0; /* Reduce margins */
+  }
+
+  .create-workout-form {
+    padding-top: 1rem; /* Reduce top margin */
+    width: 100%; /* Use full width */
+  }
+
+  .exercise-list {
+    max-height: 200px; /* Allow taller dropdowns on mobile */
+    margin-top: 0; /* Adjust positioning */
+  }
+
+  .workout-description-input,
+  .exercise-search-input {
+    width: 100%; /* Full width for inputs */
+  }
+
+  .weightform-input {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 1rem;
+  }
+
+  .unit-select {
+    width: 100%; /* Full width for select inputs */
+    margin-bottom: 1rem;
+  }
+
+  .sets-rep-input {
+    flex-direction: column; /* Stack inputs vertically */
+    align-items: flex-start;
+  }
+
+  .sets-input,
+  .rep-input {
+    width: 100%; /* Full width for inputs */
+    margin-bottom: 1rem;
+  }
+
+  .trash-icon {
+    height: 20px; /* Smaller icons for mobile */
+  }
+
+  .page-title {
+    display: flex;
+    position: relative;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-workout-card {
+    padding: 0.5rem; /* Less padding on very small screens */
+  }
+
+  .workout-form-container {
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  input,
+  select,
+  button {
+    font-size: 14px; /* Smaller text for smaller screens */
+  }
+}

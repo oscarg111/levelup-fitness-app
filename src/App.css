@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* global colors */
+:root {
+  --orange: #ff8132;
+  --red: #f03838;
+  --blue: #a0cbff;
+  --grey: #cacaca;
+}
+/* CSS for fade transition */
+/* fade.css */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+/* css for pages */
+.page {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  width: 100%;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.hero-pg-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("http://getdrawings.com/img/superhero-silhouette-images-24.png")
+    center/cover no-repeat;
+  opacity: 0.5; /* Control the opacity of the image */
+  z-index: -1; /* Make sure it stays behind the content */
+}
+
+/* Alert.css */
+.dropdown-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 16px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.alert-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #721c24;
+  cursor: pointer;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-alert {
+  animation: slideDown 0.3s ease-out;
+}
+
+button {
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  cursor: pointer; /* Changes cursor to a finger pointer on hover */
+  text-align: center;
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Box-shadow effect on hover */
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Optional: rounded track corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Optional: rounded handle corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+
+body.no-scroll {
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* adjust media for app navbar or web browser navbar */
+@media (min-width: 768px) {
+  .web-navbar {
+    display: flex;
+  }
+  .phone-navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .web-navbar {
+    display: none;
+  }
+  .phone-navbar {
+    display: flex;
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 
+.container {
+  height: 100vh;
+} */
